@@ -7,14 +7,45 @@
     <title>Portifolio</title>
 </head>
 <body>
-    <header>
-    <h1>Bem-vindo ao meu Portifolio</h1>
-    <hr>
-    <p>Desenvolvedor Web - Luis Leal</p>
-    <img src="img/WhatsApp Image 2026-01-30 at 16.07.40.jpeg" alt="Foto de Perfil" width="200">
-    </header>
-    <hr>
     
+    <header class="hero">
+    <div class="hero-content">
+        <div class="profile-wrapper">
+            <div class="glow-ring"></div>
+            <img src="img/WhatsApp Image 2026-01-30 at 16.07.40.jpeg" alt="Luis Leal" class="profile-img">
+        </div>
+        
+        <div class="text-content">
+            <h1>
+                <span class="greeting">Olá, eu sou</span>
+                <span class="name">Luis Leal</span>
+            </h1>
+            <p class="typing-text">
+                <span class="typed"></span>
+                <span class="cursor">|</span>
+            </p>
+            <p class="description">Criando experiências digitais com código e propósito</p>
+            
+            <div class="tech-stack">
+                <span>HTML5</span>
+                <span>CSS3</span>
+                <span>JavaScript</span>
+                <span>React</span>
+            </div>
+            
+            <div class="hero-buttons">
+                <a href="#projetos" class="btn-primary">Ver Projetos →</a>
+                <a href="#contato" class="btn-secondary">Contato</a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="scroll-indicator">
+        <span>Scroll</span>
+        <div class="scroll-line"></div>
+    </div>
+</header>
+    <hr>
     <main>
         <section id="Sobre-mim">
             <h2>Sobre Mim</h2>
@@ -38,6 +69,6 @@
         <p>&copy; 2025 Meu Portifólio. Todos os direitos reservados.</p>
     </footer>
 
-    
+    <script src="js/main.js"></script>
 </body>
 </html>
