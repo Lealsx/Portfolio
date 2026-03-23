@@ -1,82 +1,297 @@
-
-/* Fontes que escolhi pro meu Portifolio */
-@font-face {
-    font-family: "Unbounded";
-    src: url("../fonts/Unbounded-VariableFont_wght.ttf")
-    format("truetype");
-    font-weight: 700;
-    font-style: normal;
-    font-swap: swap;
+/* Hero Section */
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    background: linear-gradient(135deg, #0a0118 0%, #1a0a2e 100%);
+    overflow: hidden;
 }
 
-@font-face {
-    font-family: "Poppins";
-    src: url("../fonts/Poppins-Regular.ttf")
-    format("truetype");
+/* Efeito de grid tecnológico */
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: 
+        linear-gradient(rgba(160, 122, 209, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(160, 122, 209, 0.03) 1px, transparent 1px);
+    background-size: 40px 40px;
+    pointer-events: none;
+}
+
+.hero-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+    flex-wrap: wrap;
+    position: relative;
+    z-index: 2;
+}
+
+/* Wrapper da foto com glow animado */
+.profile-wrapper {
+    position: relative;
+    flex-shrink: 0;
+}
+
+.glow-ring {
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    right: -10px;
+    bottom: -10px;
+    border-radius: 50%;
+    background: linear-gradient(45deg, #a07ad1, #6a3da8, #3a1b6e);
+    opacity: 0;
+    animation: pulseGlow 3s ease-in-out infinite;
+}
+
+@keyframes pulseGlow {
+    0%, 100% {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+    50% {
+        opacity: 0.6;
+        transform: scale(1);
+    }
+}
+
+.profile-img {
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    object-fit: cover;
+    position: relative;
+    z-index: 2;
+    border: 3px solid rgba(160, 122, 209, 0.5);
+    box-shadow: 0 0 40px rgba(160, 122, 209, 0.3);
+    transition: all 0.4s ease;
+}
+
+.profile-img:hover {
+    transform: scale(1.02);
+    box-shadow: 0 0 60px rgba(160, 122, 209, 0.5);
+    border-color: #a07ad1;
+}
+
+/* Conteúdo textual */
+.text-content {
+    flex: 1;
+    min-width: 280px;
+}
+
+.greeting {
+    font-size: 20px;
     font-weight: 400;
-    font-style: normal;
-    font-swap: swap;
+    color: #a07ad1;
+    letter-spacing: 2px;
+    display: block;
+    margin-bottom: 12px;
 }
 
-
-*{
-    margin: 0;
-    padding: 0;
-}
-
-header img{
-    width: 200px;
-    height: auto;
-    margin-top: 20px; 
-    margin-left: 430px;
-    margin-bottom: 20px;
-    border: none;
-    border-radius: 80px;
-}
-
-header p{
-    margin-top: 10px;
-    font-family: "Poppins", sans-serif;
-    font-size: 35px;
-    color: #C4C4C4;
-    margin-top: px; 
-    margin-left: 700px;
-}
-
-header h1{
-    margin-top: 20px;
+.name {
     font-family: "Unbounded", sans-serif;
-    font-size: 50px;
-    line-height: 56px;
-    color: #FFFFFF;
+    font-size: 56px;
+    font-weight: 700;
+    background: linear-gradient(135deg, #ffffff 0%, #a07ad1 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    display: block;
     margin-bottom: 16px;
-    text-align: center;
 }
 
-body{
-    background-color:#12031f;
+.typing-text {
+    font-size: 28px;
+    color: #c4c4c4;
+    margin-bottom: 16px;
+    font-weight: 500;
 }
 
-section[id="Sobre-mim"]{
-     color: white;
-    margin: 20px;
-    padding: 20px;
-    border-radius: 8px;
-    background-color: #ffffff20;
+.typed {
+    color: #a07ad1;
 }
 
-section[id ="Projetos"]{
+.cursor {
+    animation: blink 1s infinite;
+    font-weight: 300;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+.description {
+    font-size: 18px;
+    color: #9a9a9a;
+    margin-bottom: 32px;
+    line-height: 1.6;
+}
+
+/* Tech Stack */
+.tech-stack {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+}
+
+.tech-stack span {
+    background: rgba(160, 122, 209, 0.1);
+    border: 1px solid rgba(160, 122, 209, 0.3);
+    padding: 6px 16px;
+    border-radius: 40px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #a07ad1;
+    transition: all 0.3s ease;
+}
+
+.tech-stack span:hover {
+    background: rgba(160, 122, 209, 0.2);
+    transform: translateY(-2px);
+}
+
+/* Botões */
+.hero-buttons {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.btn-primary {
+    display: inline-block;
+    background: linear-gradient(135deg, #a07ad1, #6a3da8);
     color: white;
-    margin: 20px;
-    padding: 20px;
-    border-radius: 8px;
-    background-color: #ffffff20;
+    text-decoration: none;
+    padding: 12px 32px;
+    border-radius: 40px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(160, 122, 209, 0.3);
 }
 
-section[id ="Contato"]{
-    color: white;
-    margin: 20px;
-    padding: 20px;
-    border-radius: 8px;
-    background-color: #ffffff20;
+.btn-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(160, 122, 209, 0.4);
+}
+
+.btn-secondary {
+    display: inline-block;
+    background: transparent;
+    border: 2px solid rgba(160, 122, 209, 0.5);
+    color: #a07ad1;
+    text-decoration: none;
+    padding: 12px 32px;
+    border-radius: 40px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-secondary:hover {
+    border-color: #a07ad1;
+    background: rgba(160, 122, 209, 0.1);
+    transform: translateY(-3px);
+}
+
+/* Scroll Indicator */
+.scroll-indicator {
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    opacity: 0.6;
+    transition: opacity 0.3s ease;
+}
+
+.scroll-indicator:hover {
+    opacity: 1;
+}
+
+.scroll-indicator span {
+    font-size: 12px;
+    letter-spacing: 2px;
+    color: #a07ad1;
+}
+
+.scroll-line {
+    width: 2px;
+    height: 40px;
+    background: linear-gradient(180deg, #a07ad1, transparent);
+    animation: scrollMove 1.5s ease-in-out infinite;
+}
+
+@keyframes scrollMove {
+    0% {
+        transform: translateY(-10px);
+        opacity: 0;
+    }
+    50% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(10px);
+        opacity: 0;
+    }
+}
+
+/* Responsividade */
+@media (max-width: 968px) {
+    .hero-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 40px;
+        padding: 60px 20px;
+    }
+    
+    .name {
+        font-size: 42px;
+    }
+    
+    .typing-text {
+        font-size: 24px;
+    }
+    
+    .hero-buttons {
+        justify-content: center;
+    }
+    
+    .tech-stack {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .profile-img {
+        width: 160px;
+        height: 160px;
+    }
+    
+    .name {
+        font-size: 32px;
+    }
+    
+    .typing-text {
+        font-size: 20px;
+    }
+    
+    .greeting {
+        font-size: 16px;
+    }
 }
