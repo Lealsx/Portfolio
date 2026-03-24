@@ -6,45 +6,84 @@
     <link rel="stylesheet" href="css/style.css">
     <title>Portifolio</title>
 </head>
+<body>
+<!-- ========== HEADER ESTILO HACKER ========== -->
+<header class="hacker-header">
+        <div class="matrix-bg"></div>
 
-<body>    
-<header class="hero">
-    <div class="hero-content">
-        <div class="profile-wrapper">
-            <div class="glow-ring"></div>
-            <img src="img/WhatsApp Image 2026-01-30 at 16.07.40.jpeg" alt="Luis Leal" class="profile-img">
-        </div>  
-        <div class="text-content">
-            <h1>
-                <span class="greeting">Olá, eu sou</span>
-                <span class="name">Luis Leal</span>
-            </h1>
-            <p class="typing-text">
-                <span class="typed"></span>
-                <span class="cursor">|</span>
-            </p>
-            <p class="description">Criando experiências digitais com código e propósito</p>
-            <div class="tech-stack">
-                <span>HTML</span>
-                <span>CSS</span>
-                <span>JavaScript</span>
-                <span>C#</span>
-                <span>Java</span>
-                <span>PHP</span>
-                <span>WordPress</span>
-            </div>
-            <div class="hero-buttons">
-                <a href="#projetos" class="btn-primary">Ver Projetos →</a>
-                <a href="#contato" class="btn-secondary">Contato</a>
-            </div>
+        <div class="header-content">
+        <!-- FOTO DE PERFIL -->
+        <div class="profile-hacker">
+            <div class="glitch-ring"></div>
+            <img src="img/WhatsApp Image 2026-01-30 at 16.07.40.jpeg" alt="Luis Leal" class="hacker-profile-img">
+            <div class="scan-line"></div>
         </div>
-    </div>
-    <div class="scroll-indicator">
-        <span>Scroll</span>
-        <div class="scroll-line"></div>
-    </div>
+        
+        <div class="header-content">
+            <div class="glitch-container">
+                <h1 class="glitch" data-text="Luis Leal">Luis Leal</h1>
+                <div class="terminal-greeting">
+                    <span class="prompt-sign">$</span>
+                    <span class="cursor-blink">./Developer Full Stack</span>
+                </div>
+                <div class="status-line">
+                    <span class="status-text">[STATUS: ONLINE]</span>
+                    <span class="status-dots"></span>
+                </div>
+            </div>
+            
+            <div class="hacker-stats">
+                <div class="stat-box">
+                    <span class="stat-label">EXPERIÊNCIA</span>
+                    <span class="stat-value">1 ano</span>
+                </div>
+                <div class="stat-box">
+                    <span class="stat-label">PROJETOS</span>
+                    <span class="stat-value">15+</span>
+                </div>
+            </div>
+            
+            <div class="hacker-buttons">
+                <a href="#projetos" class="hacker-btn primary">$ cd projetos</a>
+                <a href="#contato" class="hacker-btn secondary">$ contact</a>
+            </div>
+            
+            <div class="matrix-rain"></div>
+        </div>
+        
+        <div class="scroll-hint">
+            <span>></span> scroll down <span>&lt;</span>
+        </div>
 </header>
 <main>
+<!-- ========== SOBRE MIM ========== -->
+        <section id="sobre" class="section-about">
+            <div class="container">
+                <div class="about-terminal">
+                    <div class="terminal-window">
+                        <div class="terminal-bar">
+                            <span class="terminal-dot red"></span>
+                            <span class="terminal-dot yellow"></span>
+                            <span class="terminal-dot green"></span>
+                            <span class="terminal-title">about_me.txt</span>
+                        </div>
+                        <div class="terminal-content">
+                            <div class="terminal-line">
+                                <span class="prompt">$</span>
+                                <span class="command">about_luis.txt</span>
+                            </div>
+                            <div class="terminal-output">
+                                <p><span class="output-label">> NOME:</span> Luis Leal</p>
+                                <p><span class="output-label">> ROLE:</span> Developer Full Stack</p>
+                                <p><span class="output-label">> SKILLS:</span> HTML, CSS, JavaScript, React, Node.js</p>
+                                <p><span class="output-label">> MISSION:</span>Mudar o mundo através da tecnologia</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>                                
+<!-- ========== PROJETOS ========== -->
 <section id="projetos" class="terminal-section">
     <div class="terminal-container">
         <div class="terminal-header">
@@ -57,100 +96,133 @@
         </div>
         
         <div class="terminal-body">
-            <div class="terminal-line">
-                <span class="prompt">$</span>
-                <span class="command">ls --projetos --detalhes</span>
+            <div class="terminal-messages" id="terminalOutput">
+        </div>        
+<div class="terminal-projects hidden" id="terminalProjects">
+     <div class="projects-container" id="projectsContainer">
+    <!--
+        <div class="project-entry" data-project="1">
+        <div class="project-header">
+            <span class="project-cursor">➜</span>
+            <span class="project-name">landing-moderna/</span>
+            <span class="project-desc">Landing page responsiva com animações</span>
+            <button class="project-close-btn" data-project="1" title="Fechar projeto">✕</button>
+        </div>
+        <div class="project-details hidden">
+            <div class="detail-line">
+                <span class="detail-label"> tecnologias:</span>
+                <span>HTML5, CSS3, JavaScript, GSAP</span>
             </div>
-            
-            <div class="terminal-output" id="terminalOutput">
-                <!-- Projetos vão aparecer aqui -->
-                <div class="project-entry" data-project="1">
-                    <span class="project-cursor">➜</span>
-                    <span class="project-name">landing-moderna/</span>
-                    <span class="project-desc">Landing page responsiva com animações</span>
-                    <div class="project-details hidden">
-                        <div class="detail-line">
-                            <span class="detail-label">📁 tecnologias:</span>
-                            <span>HTML5, CSS3, JavaScript, GSAP</span>
-                        </div>
-                        <div class="detail-line">
-                            <span class="detail-label">📅 data:</span>
-                            <span>2026</span>
-                        </div>
-                        <div class="detail-line">
-                            <span class="detail-label">🔗 links:</span>
-                            <a href="#" class="terminal-link">[github]</a>
-                            <a href="#" class="terminal-link">[demo]</a>
-                        </div>
-                        <div class="detail-line">
-                            <span class="detail-label">📝 descrição:</span>
-                            <span>Landing page completa para uma startup de tecnologia. Inclui animações suaves, formulário de contato e 100% responsiva.</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="project-entry" data-project="2">
-                    <span class="project-cursor">➜</span>
-                    <span class="project-name">task-app/</span>
-                    <span class="project-desc">App de tarefas com localStorage</span>
-                    <div class="project-details hidden">
-                        <div class="detail-line">
-                            <span class="detail-label">📁 tecnologias:</span>
-                            <span>React, Hooks, CSS Modules</span>
-                        </div>
-                        <div class="detail-line">
-                            <span class="detail-label">📅 data:</span>
-                            <span>2026</span>
-                        </div>
-                        <div class="detail-line">
-                            <span class="detail-label">🔗 links:</span>
-                            <a href="#" class="terminal-link">[github]</a>
-                            <a href="#" class="terminal-link">[demo]</a>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="project-entry" data-project="3">
-                    <span class="project-cursor">➜</span>
-                    <span class="project-name">dashboard-analytics/</span>
-                    <span class="project-desc">Dashboard interativo com gráficos</span>
-                    <div class="project-details hidden">
-                        <div class="detail-line">
-                            <span class="detail-label">📁 tecnologias:</span>
-                            <span>Next.js, Chart.js, Tailwind</span>
-                        </div>
-                        <div class="detail-line">
-                            <span class="detail-label">📅 data:</span>
-                            <span>2026</span>
-                        </div>
-                        <div class="detail-line">
-                            <span class="detail-label">🔗 links:</span>
-                            <a href="#" class="terminal-link">[github]</a>
-                            <a href="#" class="terminal-link">[demo]</a>
-                        </div>
-                    </div>
-                </div>
+            <div class="detail-line">
+                <span class="detail-label"> data:</span>
+                <span>2026</span>
             </div>
-            
-            <div class="terminal-input-line">
-                <span class="prompt">$</span>
-                <input type="text" id="terminalInput" placeholder="digite 'help' para ver os comandos..." autocomplete="off">
+            <div class="detail-line">
+                <span class="detail-label"> links:</span>
+                <a href="#" class="terminal-link">[github]</a>
+                <a href="#" class="terminal-link">[demo]</a>
             </div>
-            
-            <div class="terminal-help hidden" id="terminalHelp">
-                <div class="help-line">Comandos disponíveis:</div>
-                <div class="help-line">  help     - mostra esta mensagem</div>
-                <div class="help-line">  ls       - lista todos os projetos</div>
-                <div class="help-line">  open [n] - abre detalhes do projeto (ex: open 1)</div>
-                <div class="help-line">  clear    - limpa o terminal</div>
+            <div class="detail-line">
+                <span class="detail-label"> descrição:</span>
+                <span>Landing page completa para uma startup de tecnologia. Inclui animações suaves, formulário de contato e 100% responsiva.</span>
             </div>
         </div>
     </div>
+    
+          Projeto 2 --
+    <div class="project-entry" data-project="2">
+        <div class="project-header">
+            <span class="project-cursor">➜</span>
+            <span class="project-name">task-app/</span>
+            <span class="project-desc">App de tarefas com localStorage</span>
+            <button class="project-close-btn" data-project="2" title="Fechar projeto">✕</button>
+        </div>
+        <div class="project-details hidden">
+            <div class="detail-line">
+                <span class="detail-label"> tecnologias:</span>
+                <span>React, Hooks, CSS Modules</span>
+            </div>
+            <div class="detail-line">
+                <span class="detail-label"> data:</span>
+                <span>2026</span>
+            </div>
+            <div class="detail-line">
+                <span class="detail-label"> links:</span>
+                <a href="#" class="terminal-link">[github]</a>
+                <a href="#" class="terminal-link">[demo]</a>
+            </div>
+        </div>
+    </div>
+</div>
+--->
+            </div>
+            
+            <!-- INPUT DO TERMINAL -->
+            <div class="terminal-input-line">
+                <span class="prompt">$</span>
+                <input type="text" id="terminalInput" placeholder="digite 'help' para começar..." autocomplete="off">
+            </div>
+            
+         
+        </div>
+    </div>
 </section>
+        <!-- ========== CONTATO ========== -->
+        <section id="contato" class="contact-section">
+            <div class="container">
+                <div class="contact-terminal">
+                    <div class="terminal-window">
+                        <div class="terminal-bar">
+                            <span class="terminal-dot red"></span>
+                            <span class="terminal-dot yellow"></span>
+                            <span class="terminal-dot green"></span>
+                            <span class="terminal-title">contact.sh</span>
+                        </div>
+                        <div class="terminal-content">
+                            <div class="terminal-line">
+                                <span class="prompt">$</span>
+                                <span class="command">./connect --social</span>
+                            </div>
+                            <div class="contact-links">
+                                <a href="https://github.com/Lealsx" target="_blank" class="contact-link">
+                                    <span class="contact-icon"></span> github.com/Lealsx
+                                </a>
+                                <a href="https://www.linkedin.com/in/luis-felipe-santos-leal-a783b22b3/" target="_blank" class="contact-link">
+                                    <span class="contact-icon"></span> linkedin.com/luis-felipe-santos-leal/
+                                </a>
+                                <a href="mailto:luisfelipe.leal2005@gmail.com" class="contact-link">
+                                    <span class="contact-icon"></span> luisfelipe.leal2005@gmail.com
+                                </a>
+                            </div>
+                            <div class="terminal-line mt-20">
+                                <span class="prompt">$</span>
+                                <span class="command">echo "Disponível para novos projetos"</span>
+                            </div>
+                            <div class="terminal-output">
+                                <p>> Sempre disponível para novos projetos</p>
+                                <p>> Vamos criar algo incrível juntos?</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
 </main>
-<footer>
-        <p>&copy; 2025 Meu Portifólio. Todos os direitos reservados.</p>
-</footer>
+<footer class="hacker-footer">
+        <div class="footer-content">
+            <div class="footer-line">
+                <span>></span> Luis Leal © 2026
+            </div>
+            <div class="footer-line">
+                <span>></span> Todos os direitos reservados
+            </div>
+            <div class="footer-line">
+                <span>></span> version 2.0.1
+            </div>
+        </div>
+    </footer>
+
     <script src="js/main.js"></script>
 </body>
 </html>
